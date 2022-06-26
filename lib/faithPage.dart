@@ -95,7 +95,8 @@ class faithPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
-                  width: 220,
+                  margin: EdgeInsetsDirectional.only(start: 40, end: 40),
+                  width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
