@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioi/meditativePage.dart';
 
 class faithPage extends StatelessWidget {
   const faithPage({Key? key}) : super(key: key);
@@ -62,7 +63,7 @@ class faithPage extends StatelessWidget {
                   padding: EdgeInsetsDirectional.only(top: 120),
                   child: Container(
                     margin: EdgeInsetsDirectional.only(start: 20, end: 20),
-                    height: 500,
+                    height: 400,
                     width: double.infinity,
                     decoration: BoxDecoration(
                         color: Colors.green[100],
@@ -98,7 +99,13 @@ class faithPage extends StatelessWidget {
                   margin: EdgeInsetsDirectional.only(start: 40, end: 40),
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => meditativePage(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                         primary: Colors.green[500],
                         minimumSize: Size(double.infinity, 45),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ioi/faithPage.dart';
 
 class homePage extends StatelessWidget {
   const homePage({Key? key}) : super(key: key);
@@ -88,7 +89,13 @@ class homePage extends StatelessWidget {
                 // Login Button
                 Container(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => faithPage(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.green[700],
                       minimumSize: Size(double.infinity, 45),
