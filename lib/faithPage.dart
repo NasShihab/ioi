@@ -6,11 +6,6 @@ class faithPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // int currentIndex = 0;
-    // final screens = [
-    //   workPage(),
-    //   aboutPage(),
-    // ];
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -86,7 +81,8 @@ class faithPage extends StatelessWidget {
                           Text(
                             'The Quran: Surah 70, Verse 32',
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 20, color: Colors.green[700]),
+                            style: TextStyle(
+                                fontSize: 20, color: Colors.green[700]),
                           ),
                           SizedBox(height: 5),
                         ],
@@ -112,9 +108,11 @@ class faithPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         )),
-                    child: Text('Meditate On Next Ayat',style: TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold
-                    ),),
+                    child: Text(
+                      'Meditate On Next Ayat',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ],

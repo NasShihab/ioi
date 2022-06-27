@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ioi/homePage.dart';
+import 'package:ioi/provider/bottomNavigationBarProvider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: homePage(),
+    return ChangeNotifierProvider(
+      create: (context) => bottomNavigationBarProvider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: homePage(),
+      ),
     );
   }
 }
