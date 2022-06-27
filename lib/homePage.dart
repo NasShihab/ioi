@@ -146,7 +146,13 @@ class homePage extends StatelessWidget {
                 // Login With Google
                 Container(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => faithPage(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                         primary: Colors.blue[600],
                         minimumSize: Size(double.infinity, 45),
@@ -161,7 +167,13 @@ class homePage extends StatelessWidget {
                 // Login with Facebook
                 Container(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => faithPage(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                         primary: Colors.blue[900],
                         minimumSize: Size(double.infinity, 45),
