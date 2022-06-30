@@ -57,7 +57,7 @@ class libraryPage extends StatelessWidget {
                 Padding(
                   padding: EdgeInsetsDirectional.only(top: 120),
                   child: Container(
-                      margin: EdgeInsetsDirectional.only(start: 40, end: 40),
+                      padding: EdgeInsetsDirectional.only(start: 40, end: 40),
                       height: 40,
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -66,41 +66,37 @@ class libraryPage extends StatelessWidget {
                         children: [
                           Container(
                             height: double.infinity,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Expanded(
-                                  flex: 11,
-                                  child: Container(
-                                    height: double.infinity,
-                                    child: ElevatedButton(
-                                        style: ButtonStyle(
-                                          backgroundColor: MaterialStateProperty.all(Colors.grey[900]),
-                                        ),
-                                        onPressed: () {},
-                                        child: Text('Recently Played')),
-                                  ),
+                            width: double.infinity,
+                            child: ElevatedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(Colors.grey[800]),
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                        RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(15),
+                                        )
+                                    )
                                 ),
-                                Expanded(
-                                  flex: 9,
-                                  child: Container(
-                                    height: double.infinity,
-                                    child: ElevatedButton(
-                                        style: ButtonStyle(
-                                          backgroundColor: MaterialStateProperty.all(Colors.grey[800]),
-                                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                                RoundedRectangleBorder(
-                                                    borderRadius: BorderRadius.circular(18.0),
-                                                )
-                                            )
-                                        ),
-                                        onPressed: () {},
-                                        child: Text('Trending')),
-                                  ),
-                                ),
-                              ],
+                                onPressed: () {},
+                                child: Align(
+                                    alignment: Alignment(.8,0),
+                                    child: Text('Trending', style: TextStyle(fontSize: 18),))),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
                             ),
-                          )
+                            height: double.infinity,
+                            child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(Colors.grey[900]),
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                        RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(15),
+                                        )
+                                    )
+                                ),
+                                onPressed: () {},
+                                child: Text('Recently Played',style: TextStyle(fontSize: 18))),
+                          ),
                         ],
                       )),
                 ),
