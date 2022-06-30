@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:ioi/libraryPage.dart';
 import 'package:ioi/provider/bottomNavigationBarProvider.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +14,7 @@ class bottomNavigationBarPage extends StatelessWidget {
   final screens = [
     faithPage(),
     meditativePage(),
-    faithPage(),
+    libraryPage(),
     meditativePage(),
   ];
 
